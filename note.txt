@@ -1,0 +1,103 @@
+Routing in react
+------------------
+-setting path for components
+-react-router-dom -library to provide path in react application
+
+Steps
+----
+-create react-router-dom -command[npm i react-router-dom]
+-place the App component or selector inside BrowserRouter tag.[inside main.jsx]
+-provide path for components using rote and routes tag.
+
+for fondawsome [npm install --save @fortawesome/react-fontawesome @fortawesome/free-brands-svg-icons @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons] install cheythit go to official site then search for an icon and then choose its react code and then the individual import then copy paste inside your file
+
+Features
+-reusability of component.a single component can be used as many times as you want
+-conditional rendering
+-props
+-state
+-lifecycle methods
+-React Hooks
+
+files inside pages folder have path whereas files in components does not
+
+upload video is a separate component and it is pathless
+
+**********************************
+Json server
+-----------------
+-lightweight and easy to use node.js tool that  stimulate RestfulApi using a json file as the data source.
+-with json servers fontend developers can create mock Api's without the need to complex server side= code or when the backend api isn't ready
+-it supports common http request [GET,PUT,POST,DELETE] for performing CRUD operation.
+
+how to create  json servers
+  1.create a folder and install package.json file for dependencies -npm init -y
+
+  2-then for json library we use the command {npm i json-server}
+
+  3.update the script key with {"start":"node index.js"} start command to run the application.
+  4.create .gitignore file.
+  5.create a json file db.json for data storage
+  6.create index.js file(Only file that runs in the backend)
+      the key used to import files in the server side require whereas import is used in the frontend side 
+       [require ('name')] for importing but we use this imported library it should be stored inside a variable [const variable = require('name')]
+
+
+API fetching for media player using axios
+
+AXIOS 
+----------------
+-Axios is a promise-based JavaScript library used for making HTTP requests from web browsers and Node.js environments. It simplifies the process of sending asynchronous HTTP requests to REST endpoints, handling responses, and managing errors. Axios provides a clean and straightforward API for performing CRUD (Create, Read, Update, Delete) operations, and it supports features such as:
+
+1. **Making XMLHttpRequests**: It allows you to make HTTP requests to fetch or save data to a server.
+2. **Interceptors**: It supports request and response interceptors, enabling you to perform actions before a request is sent or after a response is received.
+3. **Automatic Transformations**: Axios automatically transforms JSON data.
+4. **Error Handling**: It provides an easy way to handle errors, including network errors and responses with error status codes.
+5. **Cancellation**: You can cancel requests using the `CancelToken` API.
+6. **CSRF Protection**: It supports protection against Cross-Site Request Forgery (CSRF) attacks.
+7. **Timeouts**: You can set timeouts for requests.
+8. **Base URL**: You can set a base URL that will be prepended to all relative URLs in your requests.
+
+
+Axios is widely used in modern web development due to its simplicity and flexibility, making it an excellent choice for handling HTTP requests in JavaScript applications.
+-it is a promise based HTTP Client for node.js and the browser 
+
+-Javascript library for api call [async await ,fetch][resolved will go to .then not resolved will go to catch[error message]]
+
+-npm install axios [command on the frontend] 
+
+
+[Toastify for constumized notifications...]
+
+
+useEffect hook--predefined hook ..
+-it is used to handle side effects in functional components
+The useEffect Hook allows you to perform side effects in your components.
+has two argument and the second one is optional...
+
+syntax: 
+useEffect(function, dependencies) //dependencies are optional
+
+
+contents that can be passed as dependencies
+1. empty array [] - call the effect in the first render
+2. props or state values - call efffect in the first rener as well as when the value of props or state changes
+3. no dependency - call the effect in every render 
+
+state lifting -- to create a link b/w sibling components.it is a method of datasharing between sibling components(mlultiple components) who doesn't exsist as a parent and child relation.here data sharing happens by lifting[moving] the state into the parent component and then passing it down to the component which want to share data.State lifting is a technique in React where you move state to the closest common parent component of multiple components that need to share or synchronize the state. This allows the parent to manage the state and pass it down to the child components via props, ensuring consistency and synchronization between them.
+[ the state is moved, or "lifted," to a common ancestor component so that it can be shared between multiple child components]
+
+-intl date & time -enables language sensitive date and time format[The Intl.DateTimeFormat object enables language-sensitive date and time formatting.] 
+
+
+--------Drag and Drop mechanism-----------
+1)Draggable should be placed on the tag that should be dragged
+2)Droppable is placed on the tag on which the content is dropped
+
+Events---
+   1)onDragStart()  
+        if we want to pass any information to the component on which it is dropped while dragging we pass it using e.dataTransfer.setData('key',value)..both key and value should be string
+   2)onDragOver()
+      to prevent dataloss we call the event e.preventDefault()
+   3)onDrop()
+      the passed data is taken using e.dataTransfer.getData('key')

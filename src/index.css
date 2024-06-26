@@ -1,0 +1,12 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Wix Madefor Display
+  ;
+}
+
+@media(max-width:600px){
+  #h{
+    display: none;
+  }
+}
